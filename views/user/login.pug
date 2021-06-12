@@ -1,0 +1,13 @@
+extends  ../layout
+block content
+    h4 login
+     form(action="/login",method="post")
+        .form-group
+                label(for="Email") Email
+                input#price(type="text",class="form-control",name="Email")
+        .form-group
+                label(for="Password") Password
+                input#price(type="Password",class="form-control",name="Password")
+                
+        input(type="submit",class="btn btn-info")
+                

@@ -1,0 +1,21 @@
+extends ../layout
+
+block content 
+    h1 Add new Products
+    form(action="/products/Edit/"+product.id,method="post")
+        .form-group
+                label(for="Name") Products Name
+                input#name(type="text",class="form-control",name="Name",value=product.Name)
+        .form-group
+                label(for="Price") Products Price
+                input#price(type="text",class="form-control",name="Price",value=product.Price)
+        .form-group
+                label(for="Description") image url
+                input#price(type="text",class="form-control",name="image",value=product.image)
+        
+       
+        
+        input(type="submit",class="btn btn-info")
+                
+                
+
