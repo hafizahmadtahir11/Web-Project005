@@ -87,7 +87,7 @@ router.get("/cart/:id", async function (req, res, next) {
     res.cookie("cart",cart);
   }
 
-  res.redirect("/products");
+  res.redirect("/cart");
 });
 router.get("/cart/remove/:id", async function (req, res, next) {
   let cart = [];
