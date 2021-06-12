@@ -13,28 +13,28 @@ block content
         
                 
         tbody
-            each product in products
-                
+            section.py-5
                 .container.px-4.px-lg-5.mt-5
                     .row.gx-4.gx-lg-5.row-cols-2.row-cols-md-3.row-cols-xl-4.justify-content-center
-                        .col.mb-5
-                            .card.h-100
-                                // Product image
-                                
-                                img.card-img-top(src=product.image)
-                                // Product details
-                                .card-body.p-4
-                                    .text-center
-                                        // Product name
-                                        h5.fw-bolder=product.Name
-                                        // Product price
-                                        h6.fw-bolder=product.Price
-                                // Product actions
-                                .card-footer.p-4.pt-0.border-top-0.bg-transparent
-                                    .text-center
-                                        a.btn.btn-outline-dark.mt-auto(href="/products/Edit/"+product._id, class="btn btn-warning") Edit
-                                        a.btn.btn-outline-dark.mt-auto(href="/products/Delete/"+product._id, class="btn btn-danger") Delete
-                                        hr
-                                        a.btn.btn-outline-dark.mt-auto(href="/products/cart/"+product._id,class="btn btn-info") Add to cart
-                                        
+                        each product in products
+                            .col.mb-5
+                                .card.h-100
+                                    // Product image
+                                    
+                                    img.card-img-top(src=product.image)
+                                    // Product details
+                                    .card-body.p-4
+                                        .text-center
+                                            // Product name
+                                            h5.fw-bolder=product.Name
+                                            // Product price
+                                            h6.fw-bolder=product.Price
+                                    // Product actions
+                                    .card-footer.p-4.pt-0.border-top-0.bg-transparent
+                                        .text-center
+                                            a.btn.btn-outline-dark.mt-auto(href="/products/Edit/"+product._id, class="btn btn-warning") Edit
+                                            a.btn.btn-outline-dark.mt-auto(href="/products/Delete/"+product._id, class="btn btn-danger") Delete
+                                            hr
+                                            a.btn.btn-outline-dark.mt-auto(href="/products/cart/"+product._id,class="btn btn-info") Add to cart
+                                            
                 
