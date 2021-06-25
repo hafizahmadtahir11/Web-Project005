@@ -7,9 +7,7 @@ block content
                 th Name
                 th Price
                 th Quantity
-                th Description
-                th Status
-                th Action
+                th Delete
                 
             tbody
                 each item in cart
@@ -19,17 +17,15 @@ block content
                         td=item.Name
                         td=item.Price
                         td=item.quantity
-                        td=item.Description
-                        td=item.Status
                         td
-                            a(href="/products/cart/remove/"+item._id,class="btn-btn-danger") Delete
-
-
-                
+                            a(href="/products/cart/remove/"+item._id,class="btn btn-danger") Delete
             TFoot
                     tr
                         td Total
                         td=total
+                        
+    a.btn.btn-outline-dark.mt-auto(href="/checkout",class="btn btn-info") Checkout
+
 
 
 

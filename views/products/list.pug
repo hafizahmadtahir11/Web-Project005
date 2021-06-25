@@ -5,13 +5,13 @@ block content
     .row
         .col-sm-8
             h1=tittle
-        .col-sm-4
-            a(href="/products/add",class="btn btn-success float-right") Add Product
-
-    
-    table.table
-        
+        if !user
+            h4
+        if user
+            .col-sm-4
+                a(href="/products/add",class="btn btn-success float-right") Add Product
                 
+    table.table  
         tbody
             section.py-5
                 .container.px-4.px-lg-5.mt-5
@@ -32,9 +32,11 @@ block content
                                     // Product actions
                                     .card-footer.p-4.pt-0.border-top-0.bg-transparent
                                         .text-center
-                                            a.btn.btn-outline-dark.mt-auto(href="/products/Edit/"+product._id, class="btn btn-warning") Edit
-                                            a.btn.btn-outline-dark.mt-auto(href="/products/Delete/"+product._id, class="btn btn-danger") Delete
+                                            if user
+                                                a.btn.btn-outline-dark.mt-auto(href="/products/Edit/"+product._id, class="btn btn-warning") Edit
+                                                a.btn.btn-outline-dark.mt-auto(href="/products/Delete/"+product._id, class="btn btn-danger") Delete
                                             hr
-                                            a.btn.btn-outline-dark.mt-auto(href="/products/cart/"+product._id,class="btn btn-info") Add to cart
+                                            if !user
+                                                a.btn.btn-outline-dark.mt-auto(href="/products/cart/"+product._id,class="btn btn-info") Add to cart
                                             
                 

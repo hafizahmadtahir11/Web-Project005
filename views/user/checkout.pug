@@ -1,0 +1,31 @@
+extends  ../layout
+block content
+        h1 CheckOut
+        form(action="",method="post")
+                .form-group
+                        label(for="Name") Name
+                        input#price(class="form-control",name="Name",type="text")
+                .form-group
+                        label(for="Contact") Contact
+                        input#price(class="form-control",name="Contact",type="text")
+        
+                .form-group
+                        label(for="Address") Address
+                        input#price(class="form-control",name="Address",type="text")
+        
+        
+        
+                .form-group
+                        label(for="card") Card_Number
+                        input#price(class="form-control",name="Card_Number",type="text")
+        
+                .form-group
+                        label(for="exp") Expiry
+                        input#price(class="form-control",name="Expiry",type="text")
+        
+                .form-group
+                        label(for="cod") Security_Code
+                        input#price(class="form-control",name="Security_Code",type="text")
+                .form-group
+                       input(type="submit",class="btn btn-info")
+                
